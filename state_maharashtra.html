@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+    <title>Dam Data Display</title>
+    <style>
+        #data-container {
+            margin-top: 20px;
+            flex-direction:column;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-size: 100% 100%;
+            background-position: center;
+            height: 1000px;
+            position: relative; 
+        }
+        #image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.7); 
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="showData('a')" class="styled-button">Jayakwadi dam</button>
+<button onclick="showData('b')" class="styled-button">Koyna Dam</button>
+
+<div id="data-container">
+    <div id="image-overlay"></div>
+</div>
+
+<script>
+    function showData(dams) {
+        var dataContainer = document.getElementById('data-container');
+        var imageOverlay = document.getElementById('image-overlay');
+
+        var damsData = {
+            'a': {
+                backgroundImage: 'url(https://i.imghippo.com/files/KpKFL1707595882.jpg)',
+                text: 'Jayakwadi dam',
+            },
+            'b': {
+                backgroundImage: 'url(https://i.imghippo.com/files/mxHoP1707627240.jpg)',
+                text: 'Koyna Dam',
+            }
+        };
+     
+        imageOverlay.textContent = damsData[dams].text;
+        dataContainer.style.backgroundImage = damsData[dams].backgroundImage;
+    }
+</script>
+
+</body>
+</html>

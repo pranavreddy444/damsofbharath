@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+    <title>Dam Data Display</title>
+    <style>
+        #data-container {
+            margin-top: 20px;
+            flex-direction:column;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-size: 100% 100%;
+            background-position: center;
+            height: 1000px;
+            position: relative; 
+        }
+        #image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.7); 
+        }
+    </style>
+</head>
+<body>
+
+<div id="data-container">
+    <div id="image-overlay"></div>
+</div>
+
+<script>
+   
+    window.onload = function() {
+        showData('a');
+    }
+
+    function showData(dam) {
+        var dataContainer = document.getElementById('data-container');
+        var imageOverlay = document.getElementById('image-overlay');
+
+        var damdata = {
+            'a': {
+                backgroundImage: 'url(https://i.imghippo.com/files/mbmQa1707638272.jpg)',
+                text: 'Mawphlang Dam',
+            },
+        };
+
+        imageOverlay.textContent =damdata[dam].text;
+        dataContainer.style.backgroundImage = damdata[dam].backgroundImage;
+    }
+</script>
+
+</body>
+</html>

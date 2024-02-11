@@ -1,0 +1,7 @@
+svg path:hover{
+    fill:rgb(0, 0, 0);
+}
+#IndianMap path {
+    fill: #ccc;
+    cursor: pointer;
+}
