@@ -1,7 +1,13 @@
 svg path:hover{
-    fill:rgb(0, 0, 0);
+    fill:#a5c0dc;
 }
 #IndianMap path {
     fill: #ccc;
     cursor: pointer;
 }
+.button-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+ 
+  

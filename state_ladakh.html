@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles2.css">
-    <title>Dam Data Display</title>
+    <title>Ladakh</title>
     <style>
         #data-container {
             margin-top: 20px;
@@ -26,6 +26,98 @@
         }
     </style>
 </head>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons Example</title>
+    <style>
+        
+        .button-container {
+            text-align: center;
+            margin-top: 50px; 
+        }
+
+       
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+       
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image {
+            max-width: 100%;
+            max-height: 100%;
+            display: none;
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="button-container">
+        
+        <button class="button" onclick="goHome()">Home</button>
+
+        
+        <button class="button" onclick="showImages()">Images</button>
+    </div>
+
+
+    <div class="image-container">
+        
+        <img id="image1" class="image" src="ld1.jpg" alt="Description of image 1">
+        <img id="image2" class="image" src="ld2.jpg" alt="Description of image 2">
+        <img id="image3" class="image" src="ld3.jpg" alt="Description of image 3">
+    </div>
+
+    <script>
+        
+        function goHome() {
+            window.location.href = "index.html"; 
+        }
+
+       
+        function showImages() {
+            var image1 = document.getElementById("image1");
+            var image2 = document.getElementById("image2");
+            var image3 = document.getElementById("image3");
+            
+            if (image1.style.display === "none") {
+                image1.style.display = "block";
+                image2.style.display = "block";
+                image3.style.display = "block";
+            } else {
+                image1.style.display = "none";
+                image2.style.display = "none";
+                image3.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
 <body>
 
 <div id="data-container">
